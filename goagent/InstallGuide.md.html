@@ -1,0 +1,1572 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="">
+  <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# object: http://ogp.me/ns/object# article: http://ogp.me/ns/article# profile: http://ogp.me/ns/profile#">
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Language" content="en">
+    
+    
+    <title>goagent/InstallGuide.md at wiki · goagent/goagent · GitHub</title>
+    <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub">
+    <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub">
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-114.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-144.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144.png">
+    <meta property="fb:app_id" content="1401488693436528">
+
+      <meta content="@github" name="twitter:site" /><meta content="summary" name="twitter:card" /><meta content="goagent/goagent" name="twitter:title" /><meta content="goagent - a gae proxy" name="twitter:description" /><meta content="https://avatars1.githubusercontent.com/u/1487945?v=3&amp;s=400" name="twitter:image:src" />
+<meta content="GitHub" property="og:site_name" /><meta content="object" property="og:type" /><meta content="https://avatars1.githubusercontent.com/u/1487945?v=3&amp;s=400" property="og:image" /><meta content="goagent/goagent" property="og:title" /><meta content="https://github.com/goagent/goagent" property="og:url" /><meta content="goagent - a gae proxy" property="og:description" />
+
+      <meta name="browser-stats-url" content="/_stats">
+    <link rel="assets" href="https://assets-cdn.github.com/">
+    <link rel="conduit-xhr" href="https://ghconduit.com:25035">
+    
+    <meta name="pjax-timeout" content="1000">
+    
+
+    <meta name="msapplication-TileImage" content="/windows-tile.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="selected-link" value="repo_source" data-pjax-transient>
+      <meta name="google-analytics" content="UA-3769691-2">
+
+    <meta content="collector.githubapp.com" name="octolytics-host" /><meta content="collector-cdn.github.com" name="octolytics-script-host" /><meta content="github" name="octolytics-app-id" /><meta content="7B410266:7070:97FE7B1:54657AF6" name="octolytics-dimension-request_id" />
+    
+    <meta content="Rails, view, blob#show" name="analytics-event" />
+
+    
+    
+    <link rel="icon" type="image/x-icon" href="https://assets-cdn.github.com/favicon.ico">
+
+
+    <meta content="authenticity_token" name="csrf-param" />
+<meta content="nNgzxj2zUKi0asJdnBTo0lnA7Px6BZ2Js0+YAKZDHdy+nhP7hv1eQdcDn22bIzD9yb23JauvKahqrv/I5MVCZg==" name="csrf-token" />
+
+    <link href="https://assets-cdn.github.com/assets/github-1a2396c5eb371559f3a159e677a975bf1ac09b0d78f822f66a7b9158abaa8607.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="https://assets-cdn.github.com/assets/github2-9aa4b930049b7014e979a1c83b9ddb77734842a06479f13feec157a03bd25b76.css" media="all" rel="stylesheet" type="text/css" />
+    
+    
+
+
+    <meta http-equiv="x-pjax-version" content="96f0a1df368999fe504635716dba5235">
+
+      
+  <meta name="description" content="goagent - a gae proxy">
+  <meta name="go-import" content="github.com/goagent/goagent git https://github.com/goagent/goagent.git">
+
+  <meta content="1487945" name="octolytics-dimension-user_id" /><meta content="goagent" name="octolytics-dimension-user_login" /><meta content="18520037" name="octolytics-dimension-repository_id" /><meta content="goagent/goagent" name="octolytics-dimension-repository_nwo" /><meta content="true" name="octolytics-dimension-repository_public" /><meta content="false" name="octolytics-dimension-repository_is_fork" /><meta content="18520037" name="octolytics-dimension-repository_network_root_id" /><meta content="goagent/goagent" name="octolytics-dimension-repository_network_root_nwo" />
+  <link href="https://github.com/goagent/goagent/commits/wiki.atom" rel="alternate" title="Recent Commits to goagent:wiki" type="application/atom+xml">
+
+  </head>
+
+
+  <body class="logged_out  env-production windows vis-public page-blob">
+    <a href="#start-of-content" tabindex="1" class="accessibility-aid js-skip-to-content">Skip to content</a>
+    <div class="wrapper">
+      
+      
+      
+      
+
+
+      
+      <div class="header header-logged-out" role="banner">
+  <div class="container clearfix">
+
+    <a class="header-logo-wordmark" href="https://github.com/" ga-data-click="(Logged out) Header, go to homepage, icon:logo-wordmark">
+      <span class="mega-octicon octicon-logo-github"></span>
+    </a>
+
+    <div class="header-actions" role="navigation">
+        <a class="button primary" href="/join" data-ga-click="(Logged out) Header, clicked Sign up, text:sign-up">Sign up</a>
+      <a class="button signin" href="/login?return_to=%2Fgoagent%2Fgoagent%2Fblob%2Fwiki%2FInstallGuide.md" data-ga-click="(Logged out) Header, clicked Sign in, text:sign-in">Sign in</a>
+    </div>
+
+    <div class="site-search repo-scope js-site-search" role="search">
+      <form accept-charset="UTF-8" action="/goagent/goagent/search" class="js-site-search-form" data-global-search-url="/search" data-repo-search-url="/goagent/goagent/search" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+  <input type="text"
+    class="js-site-search-field is-clearable"
+    data-hotkey="s"
+    name="q"
+    placeholder="Search"
+    data-global-scope-placeholder="Search GitHub"
+    data-repo-scope-placeholder="Search"
+    tabindex="1"
+    autocapitalize="off">
+  <div class="scope-badge">This repository</div>
+</form>
+    </div>
+
+      <ul class="header-nav left" role="navigation">
+          <li class="header-nav-item">
+            <a class="header-nav-link" href="/explore" data-ga-click="(Logged out) Header, go to explore, text:explore">Explore</a>
+          </li>
+          <li class="header-nav-item">
+            <a class="header-nav-link" href="/features" data-ga-click="(Logged out) Header, go to features, text:features">Features</a>
+          </li>
+          <li class="header-nav-item">
+            <a class="header-nav-link" href="https://enterprise.github.com/" data-ga-click="(Logged out) Header, go to enterprise, text:enterprise">Enterprise</a>
+          </li>
+          <li class="header-nav-item">
+            <a class="header-nav-link" href="/blog" data-ga-click="(Logged out) Header, go to blog, text:blog">Blog</a>
+          </li>
+      </ul>
+
+  </div>
+</div>
+
+
+
+      <div id="start-of-content" class="accessibility-aid"></div>
+          <div class="site" itemscope itemtype="http://schema.org/WebPage">
+    <div id="js-flash-container">
+      
+    </div>
+    <div class="pagehead repohead instapaper_ignore readability-menu">
+      <div class="container">
+        
+<ul class="pagehead-actions">
+
+
+  <li>
+      <a href="/login?return_to=%2Fgoagent%2Fgoagent"
+    class="minibutton with-count star-button tooltipped tooltipped-n"
+    aria-label="You must be signed in to star a repository" rel="nofollow">
+    <span class="octicon octicon-star"></span>
+    Star
+  </a>
+
+    <a class="social-count js-social-count" href="/goagent/goagent/stargazers">
+      3,641
+    </a>
+
+  </li>
+
+    <li>
+      <a href="/login?return_to=%2Fgoagent%2Fgoagent"
+        class="minibutton with-count js-toggler-target fork-button tooltipped tooltipped-n"
+        aria-label="You must be signed in to fork a repository" rel="nofollow">
+        <span class="octicon octicon-repo-forked"></span>
+        Fork
+      </a>
+      <a href="/goagent/goagent/network" class="social-count">
+        1,603
+      </a>
+    </li>
+</ul>
+
+        <h1 itemscope itemtype="http://data-vocabulary.org/Breadcrumb" class="entry-title public">
+          <span class="mega-octicon octicon-repo"></span>
+          <span class="author"><a href="/goagent" class="url fn" itemprop="url" rel="author"><span itemprop="title">goagent</span></a></span><!--
+       --><span class="path-divider">/</span><!--
+       --><strong><a href="/goagent/goagent" class="js-current-repository" data-pjax="#js-repo-pjax-container">goagent</a></strong>
+
+          <span class="page-context-loader">
+            <img alt="" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+          </span>
+
+        </h1>
+      </div><!-- /.container -->
+    </div><!-- /.repohead -->
+
+    <div class="container">
+      <div class="repository-with-sidebar repo-container new-discussion-timeline  ">
+        <div class="repository-sidebar clearfix">
+            
+<nav class="sunken-menu repo-nav js-repo-nav js-sidenav-container-pjax js-octicon-loaders"
+     role="navigation"
+     data-pjax="#js-repo-pjax-container"
+     data-issue-count-url="/goagent/goagent/issues/counts">
+  <ul class="sunken-menu-group">
+    <li class="tooltipped tooltipped-w" aria-label="Code">
+      <a href="/goagent/goagent/tree/wiki" aria-label="Code" class="selected js-selected-navigation-item sunken-menu-item" data-hotkey="g c" data-selected-links="repo_source repo_downloads repo_commits repo_releases repo_tags repo_branches /goagent/goagent/tree/wiki">
+        <span class="octicon octicon-code"></span> <span class="full-word">Code</span>
+        <img alt="" class="mini-loader" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>    </li>
+
+
+    <li class="tooltipped tooltipped-w" aria-label="Pull Requests">
+      <a href="/goagent/goagent/pulls" aria-label="Pull Requests" class="js-selected-navigation-item sunken-menu-item" data-hotkey="g p" data-selected-links="repo_pulls /goagent/goagent/pulls">
+          <span class="octicon octicon-git-pull-request"></span> <span class="full-word">Pull Requests</span>
+          <span class="js-pull-replace-counter"></span>
+          <img alt="" class="mini-loader" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>    </li>
+
+
+  </ul>
+  <div class="sunken-menu-separator"></div>
+  <ul class="sunken-menu-group">
+
+    <li class="tooltipped tooltipped-w" aria-label="Pulse">
+      <a href="/goagent/goagent/pulse" aria-label="Pulse" class="js-selected-navigation-item sunken-menu-item" data-selected-links="pulse /goagent/goagent/pulse">
+        <span class="octicon octicon-pulse"></span> <span class="full-word">Pulse</span>
+        <img alt="" class="mini-loader" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>    </li>
+
+    <li class="tooltipped tooltipped-w" aria-label="Graphs">
+      <a href="/goagent/goagent/graphs" aria-label="Graphs" class="js-selected-navigation-item sunken-menu-item" data-selected-links="repo_graphs repo_contributors /goagent/goagent/graphs">
+        <span class="octicon octicon-graph"></span> <span class="full-word">Graphs</span>
+        <img alt="" class="mini-loader" height="16" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>    </li>
+  </ul>
+
+
+</nav>
+
+              <div class="only-with-full-nav">
+                
+  
+<div class="clone-url open"
+  data-protocol-type="http"
+  data-url="/users/set_protocol?protocol_selector=http&amp;protocol_type=clone">
+  <h3><span class="text-emphasized">HTTPS</span> clone URL</h3>
+  <div class="input-group">
+    <input type="text" class="input-mini input-monospace js-url-field"
+           value="https://github.com/goagent/goagent.git" readonly="readonly">
+    <span class="input-group-button">
+      <button aria-label="Copy to clipboard" class="js-zeroclipboard minibutton zeroclipboard-button" data-clipboard-text="https://github.com/goagent/goagent.git" data-copied-hint="Copied!" type="button"><span class="octicon octicon-clippy"></span></button>
+    </span>
+  </div>
+</div>
+
+  
+<div class="clone-url "
+  data-protocol-type="subversion"
+  data-url="/users/set_protocol?protocol_selector=subversion&amp;protocol_type=clone">
+  <h3><span class="text-emphasized">Subversion</span> checkout URL</h3>
+  <div class="input-group">
+    <input type="text" class="input-mini input-monospace js-url-field"
+           value="https://github.com/goagent/goagent" readonly="readonly">
+    <span class="input-group-button">
+      <button aria-label="Copy to clipboard" class="js-zeroclipboard minibutton zeroclipboard-button" data-clipboard-text="https://github.com/goagent/goagent" data-copied-hint="Copied!" type="button"><span class="octicon octicon-clippy"></span></button>
+    </span>
+  </div>
+</div>
+
+
+<p class="clone-options">You can clone with
+      <a href="#" class="js-clone-selector" data-protocol="http">HTTPS</a>
+      or <a href="#" class="js-clone-selector" data-protocol="subversion">Subversion</a>.
+  <a href="https://help.github.com/articles/which-remote-url-should-i-use" class="help tooltipped tooltipped-n" aria-label="Get help on which URL is right for you.">
+    <span class="octicon octicon-question"></span>
+  </a>
+</p>
+
+
+  <a href="http://windows.github.com" class="minibutton sidebar-button" title="Save goagent/goagent to your computer and use it in GitHub Desktop." aria-label="Save goagent/goagent to your computer and use it in GitHub Desktop.">
+    <span class="octicon octicon-device-desktop"></span>
+    Clone in Desktop
+  </a>
+
+                <a href="/goagent/goagent/archive/wiki.zip"
+                   class="minibutton sidebar-button"
+                   aria-label="Download the contents of goagent/goagent as a zip file"
+                   title="Download the contents of goagent/goagent as a zip file"
+                   rel="nofollow">
+                  <span class="octicon octicon-cloud-download"></span>
+                  Download ZIP
+                </a>
+              </div>
+        </div><!-- /.repository-sidebar -->
+
+        <div id="js-repo-pjax-container" class="repository-content context-loader-container" data-pjax-container>
+          
+
+<a href="/goagent/goagent/blob/8795c66a36de5ebcb74871942dad766cc8968017/InstallGuide.md" class="hidden js-permalink-shortcut" data-hotkey="y">Permalink</a>
+
+<!-- blob contrib key: blob_contributors:v21:5a9e82df959fcb07e6941239e323d95c -->
+
+<div class="file-navigation">
+  
+<div class="select-menu js-menu-container js-select-menu left">
+  <span class="minibutton select-menu-button js-menu-target css-truncate" data-hotkey="w"
+    data-master-branch="3.0"
+    data-ref="wiki"
+    title="wiki"
+    role="button" aria-label="Switch branches or tags" tabindex="0" aria-haspopup="true">
+    <span class="octicon octicon-git-branch"></span>
+    <i>branch:</i>
+    <span class="js-select-button css-truncate-target">wiki</span>
+  </span>
+
+  <div class="select-menu-modal-holder js-menu-content js-navigation-container" data-pjax aria-hidden="true">
+
+    <div class="select-menu-modal">
+      <div class="select-menu-header">
+        <span class="select-menu-title">Switch branches/tags</span>
+        <span class="octicon octicon-x js-menu-close" role="button" aria-label="Close"></span>
+      </div> <!-- /.select-menu-header -->
+
+      <div class="select-menu-filters">
+        <div class="select-menu-text-filter">
+          <input type="text" aria-label="Filter branches/tags" id="context-commitish-filter-field" class="js-filterable-field js-navigation-enable" placeholder="Filter branches/tags">
+        </div>
+        <div class="select-menu-tabs">
+          <ul>
+            <li class="select-menu-tab">
+              <a href="#" data-tab-filter="branches" class="js-select-menu-tab">Branches</a>
+            </li>
+            <li class="select-menu-tab">
+              <a href="#" data-tab-filter="tags" class="js-select-menu-tab">Tags</a>
+            </li>
+          </ul>
+        </div><!-- /.select-menu-tabs -->
+      </div><!-- /.select-menu-filters -->
+
+      <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="branches">
+
+        <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
+
+
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/goagent/goagent/blob/3.0/InstallGuide.md"
+                 data-name="3.0"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="3.0">3.0</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item selected">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/goagent/goagent/blob/wiki/InstallGuide.md"
+                 data-name="wiki"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="wiki">wiki</a>
+            </div> <!-- /.select-menu-item -->
+        </div>
+
+          <div class="select-menu-no-results">Nothing to show</div>
+      </div> <!-- /.select-menu-list -->
+
+      <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="tags">
+        <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
+
+
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/goagent/goagent/tree/v3.2.2/InstallGuide.md"
+                 data-name="v3.2.2"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v3.2.2">v3.2.2</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/goagent/goagent/tree/v3.2.1/InstallGuide.md"
+                 data-name="v3.2.1"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v3.2.1">v3.2.1</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/goagent/goagent/tree/v3.2.0b4/InstallGuide.md"
+                 data-name="v3.2.0b4"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v3.2.0b4">v3.2.0b4</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/goagent/goagent/tree/v3.2.0b3/InstallGuide.md"
+                 data-name="v3.2.0b3"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v3.2.0b3">v3.2.0b3</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/goagent/goagent/tree/v3.2.0/InstallGuide.md"
+                 data-name="v3.2.0"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v3.2.0">v3.2.0</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/goagent/goagent/tree/v3.1.25/InstallGuide.md"
+                 data-name="v3.1.25"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v3.1.25">v3.1.25</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/goagent/goagent/tree/v3.1.24/InstallGuide.md"
+                 data-name="v3.1.24"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v3.1.24">v3.1.24</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/goagent/goagent/tree/v3.1.23/InstallGuide.md"
+                 data-name="v3.1.23"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v3.1.23">v3.1.23</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/goagent/goagent/tree/v3.1.22/InstallGuide.md"
+                 data-name="v3.1.22"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v3.1.22">v3.1.22</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/goagent/goagent/tree/v3.1.21/InstallGuide.md"
+                 data-name="v3.1.21"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v3.1.21">v3.1.21</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/goagent/goagent/tree/v3.1.20/InstallGuide.md"
+                 data-name="v3.1.20"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v3.1.20">v3.1.20</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/goagent/goagent/tree/v3.1.19/InstallGuide.md"
+                 data-name="v3.1.19"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v3.1.19">v3.1.19</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/goagent/goagent/tree/v3.1.18/InstallGuide.md"
+                 data-name="v3.1.18"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v3.1.18">v3.1.18</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/goagent/goagent/tree/v3.1.17/InstallGuide.md"
+                 data-name="v3.1.17"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v3.1.17">v3.1.17</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/goagent/goagent/tree/v3.1.16/InstallGuide.md"
+                 data-name="v3.1.16"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v3.1.16">v3.1.16</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/goagent/goagent/tree/v3.1.15/InstallGuide.md"
+                 data-name="v3.1.15"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v3.1.15">v3.1.15</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/goagent/goagent/tree/v3.1.14/InstallGuide.md"
+                 data-name="v3.1.14"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v3.1.14">v3.1.14</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/goagent/goagent/tree/v3.1.13/InstallGuide.md"
+                 data-name="v3.1.13"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v3.1.13">v3.1.13</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/goagent/goagent/tree/v3.1.12/InstallGuide.md"
+                 data-name="v3.1.12"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v3.1.12">v3.1.12</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/goagent/goagent/tree/v3.1.11/InstallGuide.md"
+                 data-name="v3.1.11"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v3.1.11">v3.1.11</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/goagent/goagent/tree/v3.1.10/InstallGuide.md"
+                 data-name="v3.1.10"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v3.1.10">v3.1.10</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/goagent/goagent/tree/v3.1.9/InstallGuide.md"
+                 data-name="v3.1.9"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v3.1.9">v3.1.9</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/goagent/goagent/tree/v3.1.8/InstallGuide.md"
+                 data-name="v3.1.8"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v3.1.8">v3.1.8</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/goagent/goagent/tree/v3.1.7/InstallGuide.md"
+                 data-name="v3.1.7"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v3.1.7">v3.1.7</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/goagent/goagent/tree/v3.1.6/InstallGuide.md"
+                 data-name="v3.1.6"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v3.1.6">v3.1.6</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/goagent/goagent/tree/v3.1.5/InstallGuide.md"
+                 data-name="v3.1.5"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v3.1.5">v3.1.5</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/goagent/goagent/tree/v3.1.4/InstallGuide.md"
+                 data-name="v3.1.4"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v3.1.4">v3.1.4</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/goagent/goagent/tree/v3.1.3/InstallGuide.md"
+                 data-name="v3.1.3"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v3.1.3">v3.1.3</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/goagent/goagent/tree/v3.1.2/InstallGuide.md"
+                 data-name="v3.1.2"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v3.1.2">v3.1.2</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/goagent/goagent/tree/v3.1.1/InstallGuide.md"
+                 data-name="v3.1.1"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v3.1.1">v3.1.1</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/goagent/goagent/tree/v3.1.0/InstallGuide.md"
+                 data-name="v3.1.0"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v3.1.0">v3.1.0</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/goagent/goagent/tree/v3.0.9/InstallGuide.md"
+                 data-name="v3.0.9"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v3.0.9">v3.0.9</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/goagent/goagent/tree/v3.0.8/InstallGuide.md"
+                 data-name="v3.0.8"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v3.0.8">v3.0.8</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/goagent/goagent/tree/v3.0.7/InstallGuide.md"
+                 data-name="v3.0.7"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v3.0.7">v3.0.7</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/goagent/goagent/tree/v3.0.6/InstallGuide.md"
+                 data-name="v3.0.6"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v3.0.6">v3.0.6</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/goagent/goagent/tree/v3.0.5/InstallGuide.md"
+                 data-name="v3.0.5"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v3.0.5">v3.0.5</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/goagent/goagent/tree/v3.0.4/InstallGuide.md"
+                 data-name="v3.0.4"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v3.0.4">v3.0.4</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/goagent/goagent/tree/v3.0.3/InstallGuide.md"
+                 data-name="v3.0.3"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v3.0.3">v3.0.3</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/goagent/goagent/tree/v3.0.2/InstallGuide.md"
+                 data-name="v3.0.2"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v3.0.2">v3.0.2</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/goagent/goagent/tree/v3.0.1/InstallGuide.md"
+                 data-name="v3.0.1"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v3.0.1">v3.0.1</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/goagent/goagent/tree/v3.0.0/InstallGuide.md"
+                 data-name="v3.0.0"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v3.0.0">v3.0.0</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/goagent/goagent/tree/v2.1.17/InstallGuide.md"
+                 data-name="v2.1.17"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v2.1.17">v2.1.17</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/goagent/goagent/tree/v2.1.16/InstallGuide.md"
+                 data-name="v2.1.16"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v2.1.16">v2.1.16</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/goagent/goagent/tree/v2.1.15/InstallGuide.md"
+                 data-name="v2.1.15"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v2.1.15">v2.1.15</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/goagent/goagent/tree/v2.1.14/InstallGuide.md"
+                 data-name="v2.1.14"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v2.1.14">v2.1.14</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/goagent/goagent/tree/v2.1.13/InstallGuide.md"
+                 data-name="v2.1.13"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v2.1.13">v2.1.13</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/goagent/goagent/tree/v2.1.12/InstallGuide.md"
+                 data-name="v2.1.12"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v2.1.12">v2.1.12</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/goagent/goagent/tree/v2.1.11/InstallGuide.md"
+                 data-name="v2.1.11"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v2.1.11">v2.1.11</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/goagent/goagent/tree/v2.1.9/InstallGuide.md"
+                 data-name="v2.1.9"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v2.1.9">v2.1.9</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/goagent/goagent/tree/v2.1.8/InstallGuide.md"
+                 data-name="v2.1.8"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v2.1.8">v2.1.8</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/goagent/goagent/tree/v2.1.7/InstallGuide.md"
+                 data-name="v2.1.7"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v2.1.7">v2.1.7</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/goagent/goagent/tree/v2.1.6/InstallGuide.md"
+                 data-name="v2.1.6"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v2.1.6">v2.1.6</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/goagent/goagent/tree/v2.1.5/InstallGuide.md"
+                 data-name="v2.1.5"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v2.1.5">v2.1.5</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/goagent/goagent/tree/v2.1.4/InstallGuide.md"
+                 data-name="v2.1.4"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v2.1.4">v2.1.4</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/goagent/goagent/tree/v2.1.3/InstallGuide.md"
+                 data-name="v2.1.3"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v2.1.3">v2.1.3</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/goagent/goagent/tree/v2.1.2/InstallGuide.md"
+                 data-name="v2.1.2"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v2.1.2">v2.1.2</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/goagent/goagent/tree/v2.1.1/InstallGuide.md"
+                 data-name="v2.1.1"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v2.1.1">v2.1.1</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/goagent/goagent/tree/v2.1.0/InstallGuide.md"
+                 data-name="v2.1.0"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v2.1.0">v2.1.0</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/goagent/goagent/tree/v2.0.14/InstallGuide.md"
+                 data-name="v2.0.14"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v2.0.14">v2.0.14</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/goagent/goagent/tree/v2.0.13/InstallGuide.md"
+                 data-name="v2.0.13"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v2.0.13">v2.0.13</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/goagent/goagent/tree/v2.0.12/InstallGuide.md"
+                 data-name="v2.0.12"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v2.0.12">v2.0.12</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/goagent/goagent/tree/v2.0.11/InstallGuide.md"
+                 data-name="v2.0.11"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v2.0.11">v2.0.11</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/goagent/goagent/tree/v2.0.10/InstallGuide.md"
+                 data-name="v2.0.10"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v2.0.10">v2.0.10</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/goagent/goagent/tree/v2.0.9/InstallGuide.md"
+                 data-name="v2.0.9"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v2.0.9">v2.0.9</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/goagent/goagent/tree/v2.0.8/InstallGuide.md"
+                 data-name="v2.0.8"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v2.0.8">v2.0.8</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/goagent/goagent/tree/v2.0.7/InstallGuide.md"
+                 data-name="v2.0.7"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v2.0.7">v2.0.7</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/goagent/goagent/tree/v2.0.6/InstallGuide.md"
+                 data-name="v2.0.6"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v2.0.6">v2.0.6</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/goagent/goagent/tree/v2.0.5/InstallGuide.md"
+                 data-name="v2.0.5"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v2.0.5">v2.0.5</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/goagent/goagent/tree/v2.0.4/InstallGuide.md"
+                 data-name="v2.0.4"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v2.0.4">v2.0.4</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/goagent/goagent/tree/v2.0.3/InstallGuide.md"
+                 data-name="v2.0.3"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v2.0.3">v2.0.3</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/goagent/goagent/tree/v2.0.2/InstallGuide.md"
+                 data-name="v2.0.2"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v2.0.2">v2.0.2</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/goagent/goagent/tree/v2.0.1/InstallGuide.md"
+                 data-name="v2.0.1"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v2.0.1">v2.0.1</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/goagent/goagent/tree/v1.10.0/InstallGuide.md"
+                 data-name="v1.10.0"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v1.10.0">v1.10.0</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/goagent/goagent/tree/v1.8.11/InstallGuide.md"
+                 data-name="v1.8.11"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v1.8.11">v1.8.11</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/goagent/goagent/tree/v1.8.10/InstallGuide.md"
+                 data-name="v1.8.10"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v1.8.10">v1.8.10</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/goagent/goagent/tree/v1.8.9/InstallGuide.md"
+                 data-name="v1.8.9"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v1.8.9">v1.8.9</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/goagent/goagent/tree/v1.8.8/InstallGuide.md"
+                 data-name="v1.8.8"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v1.8.8">v1.8.8</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/goagent/goagent/tree/v1.8.7/InstallGuide.md"
+                 data-name="v1.8.7"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v1.8.7">v1.8.7</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/goagent/goagent/tree/v1.8.6/InstallGuide.md"
+                 data-name="v1.8.6"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v1.8.6">v1.8.6</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/goagent/goagent/tree/v1.8.5/InstallGuide.md"
+                 data-name="v1.8.5"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v1.8.5">v1.8.5</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/goagent/goagent/tree/v1.8.4/InstallGuide.md"
+                 data-name="v1.8.4"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v1.8.4">v1.8.4</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/goagent/goagent/tree/v1.8.3/InstallGuide.md"
+                 data-name="v1.8.3"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v1.8.3">v1.8.3</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/goagent/goagent/tree/v1.8.2/InstallGuide.md"
+                 data-name="v1.8.2"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v1.8.2">v1.8.2</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/goagent/goagent/tree/v1.8.0/InstallGuide.md"
+                 data-name="v1.8.0"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v1.8.0">v1.8.0</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/goagent/goagent/tree/v1.7.10/InstallGuide.md"
+                 data-name="v1.7.10"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v1.7.10">v1.7.10</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/goagent/goagent/tree/v1.7.9/InstallGuide.md"
+                 data-name="v1.7.9"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v1.7.9">v1.7.9</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/goagent/goagent/tree/v1.7.8/InstallGuide.md"
+                 data-name="v1.7.8"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text css-truncate-target"
+                 title="v1.7.8">v1.7.8</a>
+            </div> <!-- /.select-menu-item -->
+        </div>
+
+        <div class="select-menu-no-results">Nothing to show</div>
+      </div> <!-- /.select-menu-list -->
+
+    </div> <!-- /.select-menu-modal -->
+  </div> <!-- /.select-menu-modal-holder -->
+</div> <!-- /.select-menu -->
+
+  <div class="button-group right">
+    <a href="/goagent/goagent/find/wiki"
+          class="js-show-file-finder minibutton empty-icon tooltipped tooltipped-s"
+          data-pjax
+          data-hotkey="t"
+          aria-label="Quickly jump between files">
+      <span class="octicon octicon-list-unordered"></span>
+    </a>
+    <button aria-label="Copy to clipboard" class="js-zeroclipboard minibutton zeroclipboard-button" data-clipboard-text="InstallGuide.md" data-copied-hint="Copied!" type="button"><span class="octicon octicon-clippy"></span></button>
+  </div>
+
+  <div class="breadcrumb">
+    <span class='repo-root js-repo-root'><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/goagent/goagent/tree/wiki" class="" data-branch="wiki" data-direction="back" data-pjax="true" itemscope="url"><span itemprop="title">goagent</span></a></span></span><span class="separator"> / </span><strong class="final-path">InstallGuide.md</strong>
+  </div>
+</div>
+
+
+  <div class="commit file-history-tease">
+    <div class="file-history-tease-header">
+        <img alt="Phus Lu" class="avatar" data-user="195836" height="24" src="https://avatars0.githubusercontent.com/u/195836?v=2&amp;s=48" width="24" />
+        <span class="author"><a href="/phuslu" rel="contributor">phuslu</a></span>
+        <time datetime="2014-11-06T13:38:03Z" is="relative-time">Nov 6, 2014</time>
+        <div class="commit-title">
+            <a href="/goagent/goagent/commit/a95e2fdb76975cb65e8dd015c33700d16855e7e9" class="message" data-pjax="true" title="break lines for images">break lines for images</a>
+        </div>
+    </div>
+
+    <div class="participation">
+      <p class="quickstat">
+        <a href="#blob_contributors_box" rel="facebox">
+          <strong>1</strong>
+           contributor
+        </a>
+      </p>
+      
+    </div>
+    <div id="blob_contributors_box" style="display:none">
+      <h2 class="facebox-header">Users who have contributed to this file</h2>
+      <ul class="facebox-user-list">
+          <li class="facebox-user-list-item">
+            <img alt="Phus Lu" data-user="195836" height="24" src="https://avatars0.githubusercontent.com/u/195836?v=2&amp;s=48" width="24" />
+            <a href="/phuslu">phuslu</a>
+          </li>
+      </ul>
+    </div>
+  </div>
+
+<div class="file-box">
+  <div class="file">
+    <div class="meta clearfix">
+      <div class="info file-name">
+          <span>140 lines (129 sloc)</span>
+          <span class="meta-divider"></span>
+        <span>14.804 kb</span>
+      </div>
+      <div class="actions">
+        <div class="button-group">
+          <a href="/goagent/goagent/raw/wiki/InstallGuide.md" class="minibutton " id="raw-url">Raw</a>
+            <a href="/goagent/goagent/blame/wiki/InstallGuide.md" class="minibutton js-update-url-with-hash">Blame</a>
+          <a href="/goagent/goagent/commits/wiki/InstallGuide.md" class="minibutton " rel="nofollow">History</a>
+        </div><!-- /.button-group -->
+
+          <a class="octicon-button tooltipped tooltipped-nw"
+             href="http://windows.github.com" aria-label="Open this file in GitHub for Windows">
+              <span class="octicon octicon-device-desktop"></span>
+          </a>
+
+            <a class="octicon-button disabled tooltipped tooltipped-w" href="#"
+               aria-label="You must be signed in to make or propose changes"><span class="octicon octicon-pencil"></span></a>
+
+          <a class="octicon-button danger disabled tooltipped tooltipped-w" href="#"
+             aria-label="You must be signed in to make or propose changes">
+          <span class="octicon octicon-trashcan"></span>
+        </a>
+      </div><!-- /.actions -->
+    </div>
+    
+  <div id="readme" class="blob instapaper_body">
+    <article class="markdown-body entry-content" itemprop="mainContentOfPage"><h1>
+<a id="user-content-图文教程" class="anchor" href="#%E5%9B%BE%E6%96%87%E6%95%99%E7%A8%8B" aria-hidden="true"><span class="octicon octicon-link"></span></a>图文教程</h1>
+
+<h2>
+<a id="user-content-一申请-google-app-engine-并创建-appid" class="anchor" href="#%E4%B8%80%E7%94%B3%E8%AF%B7-google-app-engine-%E5%B9%B6%E5%88%9B%E5%BB%BA-appid" aria-hidden="true"><span class="octicon octicon-link"></span></a>一、申请 Google App Engine 并创建 appid</h2>
+
+<ol class="task-list">
+<li>申请注册一个 <a href="https://appengine.google.com">Google App Engine</a> 账号。没有 Gmail 账号先注册一个， 用你的 Gmail 账号登录。<br>
+<a href="https://raw.githubusercontent.com/goagent/goagent/wiki/InstallGuideImages/786e2887tw1e4thu7y0pgj20hs0atgn9.jpg" target="_blank"><img src="https://raw.githubusercontent.com/goagent/goagent/wiki/InstallGuideImages/786e2887tw1e4thu7y0pgj20hs0atgn9.jpg" alt="申请 GAE 帐号" style="max-width:100%;"></a>
+</li>
+<li>登录之后，自动转向 Application 注册页面，如下图：<br>
+<a href="https://raw.githubusercontent.com/goagent/goagent/wiki/InstallGuideImages/786e2887tw1e4thu8o1tuj20hs067mxn.jpg" target="_blank"><img src="https://raw.githubusercontent.com/goagent/goagent/wiki/InstallGuideImages/786e2887tw1e4thu8o1tuj20hs067mxn.jpg" alt="申请 GAE 帐号" style="max-width:100%;"></a>
+</li>
+<li>接下来的页面，输入你的手机号码，需要注意的是，手机号码前面要+86(中国区号) 格式如：+86 13888888888。<br>
+<a href="https://raw.githubusercontent.com/goagent/goagent/wiki/InstallGuideImages/786e2887tw1e4thubjc3yj20hs07dmxw.jpg" target="_blank"><img src="https://raw.githubusercontent.com/goagent/goagent/wiki/InstallGuideImages/786e2887tw1e4thubjc3yj20hs07dmxw.jpg" alt="申请 GAE 帐号" style="max-width:100%;"></a>
+
+<ul class="task-list">
+<li>然后等待收取手机短信，收到短信后(一串数字号码)填入下图表单，点 send 提交.(有的手机收不到信息，到<a href="https://appengine.google.com/waitlist/sms_issues">https://appengine.google.com/waitlist/sms_issues</a> 提交该情况，一个工作日就能收到谷歌提示Google App Engine成功开通)。<br>
+<a href="https://raw.githubusercontent.com/goagent/goagent/wiki/InstallGuideImages/786e2887tw1e4thucmsi5j20hc0743z5.jpg" target="_blank"><img src="https://raw.githubusercontent.com/goagent/goagent/wiki/InstallGuideImages/786e2887tw1e4thucmsi5j20hc0743z5.jpg" alt="申请 GAE 帐号" style="max-width:100%;"></a>
+</li>
+</ul>
+</li>
+<li>提交完成之后，GAE 账号即被激活，然后就可以创建新的应用程序了。转入 "My Applications" 页面，点击 "Create an Application" 新建应用<br>
+<a href="https://raw.githubusercontent.com/goagent/goagent/wiki/InstallGuideImages/786e2887tw1e4thug3zu2j20hs07tzku.jpg" target="_blank"><img src="https://raw.githubusercontent.com/goagent/goagent/wiki/InstallGuideImages/786e2887tw1e4thug3zu2j20hs07tzku.jpg" alt="申请 GAE 帐号" style="max-width:100%;"></a>
+
+<ul class="task-list">
+<li>一个Gmail账户最多可以创建十个GAE应用，每个应用每天 1G 免费流量。这里我们只创建一个应用就可以了。进入下一步，填写新应用的必要信息，如下图。在图中第一处添加一个应用名称，如 abc555 ,验证一下是否可用，如果显示 "Yes" 那么 abc555 就是你的 Appid(记住这个id)，而 abc555.appspot.com 就是你的应用服务器地址了。第二个空可随便填，点击 Create Application 按钮提交<br>
+<a href="https://raw.githubusercontent.com/goagent/goagent/wiki/InstallGuideImages/786e2887tw1e2s3t7k4v9j.jpg" target="_blank"><img src="https://raw.githubusercontent.com/goagent/goagent/wiki/InstallGuideImages/786e2887tw1e2s3t7k4v9j.jpg" alt="申请 GAE 帐号" style="max-width:100%;"></a>
+</li>
+<li>提交之后，就能看到下图这个页面，就说明你已经成功创建了一个新的应用,你也可以点击应用名称，进入控制面板进行管理。<br>
+<a href="https://raw.githubusercontent.com/goagent/goagent/wiki/InstallGuideImages/786e2887tw1e4thubz37cj20go049t8w.jpg" target="_blank"><img src="https://raw.githubusercontent.com/goagent/goagent/wiki/InstallGuideImages/786e2887tw1e4thubz37cj20go049t8w.jpg" alt="申请 GAE 帐号" style="max-width:100%;"></a>
+</li>
+<li>如果你要建立多个 appid，只需要从步骤 4 开始再重复操作多次就行了。</li>
+</ul>
+</li>
+</ol>
+
+<h2>
+<a id="user-content-二下载-goagent-并上传至-google-app-engine" class="anchor" href="#%E4%BA%8C%E4%B8%8B%E8%BD%BD-goagent-%E5%B9%B6%E4%B8%8A%E4%BC%A0%E8%87%B3-google-app-engine" aria-hidden="true"><span class="octicon octicon-link"></span></a>二、下载 goagent 并上传至 Google App Engine</h2>
+
+<ol class="task-list">
+<li>下载 goagent 并解压，<a href="https://github.com/goagent/goagent">https://github.com/goagent/goagent</a>
+</li>
+<li>
+<p>编辑 local\proxy.ini，把其中 appid = goagent 中的 goagent 改成你之前申请的应用的 appid (用 windows 的记事本也可以)</p>
+
+<ul class="task-list">
+<li>如果要使用多个appid，appid之间用|隔开，如：appid1|appid2|appid3，每个 appid 必须确认上传成功才能使用</li>
+</ul>
+
+<pre><code>[gae]
+appid = appid1|appid2|appid3
+</code></pre>
+</li>
+<li><p>运行 goagent.exe</p></li>
+<li>上传
+
+<ul class="task-list">
+<li>Windows 用户：双击 server 文件夹下的 uploader.bat，输入你上步创建的 appid (同时上传多 appid 在 appid 之间用 | 隔开,一次只能上传同一个谷歌帐户下的 appid )填完按回车。根据提示填你的谷歌帐户邮箱地址，填完按回车。根据提示填你的谷歌帐户密码(注意：如果开启了两步验证，密码应为<a href="https://accounts.google.com/b/0/IssuedAuthSubTokens">16位的应用程序专用密码</a>而非谷歌帐户密码，否则会出现 AttributeError: can't set attribute 错误)，填完按回车。</li>
+<li>Linux/Mac OSX用户上传方法：在server目录下执行：python uploader.py<br>
+<a href="https://raw.githubusercontent.com/goagent/goagent/wiki/InstallGuideImages/786e2887jw9e7n5u3iijqj20iq0c8q6b.jpg" target="_blank"><img src="https://raw.githubusercontent.com/goagent/goagent/wiki/InstallGuideImages/786e2887jw9e7n5u3iijqj20iq0c8q6b.jpg" alt="上传 GAE" style="max-width:100%;"></a>
+</li>
+<li>如遇到上传困难的情况，可以先运行 goagent.exe(要先修改 appid )再运行 uploader.bat</li>
+<li>上传成功就会看图下图界面<br>
+<a href="https://raw.githubusercontent.com/goagent/goagent/wiki/InstallGuideImages/786e2887jw1e3bnmhap9wj.jpg_uploaded.png" target="_blank"><img src="https://raw.githubusercontent.com/goagent/goagent/wiki/InstallGuideImages/786e2887jw1e3bnmhap9wj.jpg_uploaded.png" alt="上传 GAE" style="max-width:100%;"></a>
+</li>
+</ul>
+</li>
+</ol>
+
+<h2>
+<a id="user-content-三运行客户端" class="anchor" href="#%E4%B8%89%E8%BF%90%E8%A1%8C%E5%AE%A2%E6%88%B7%E7%AB%AF" aria-hidden="true"><span class="octicon octicon-link"></span></a>三、运行客户端</h2>
+
+<ol class="task-list">
+<li>Windows 用户运行 local 文件夹中的 goagent.exe，Linux/MacOSX 用户运行 python proxy.py
+
+<ul class="task-list">
+<li>设置浏览器或其他需要代理的程序代理地址为 127.0.0.1:8087</li>
+<li>注意：使用过程中要一直运行 goagent.exe/proxy.py</li>
+<li>代理地址 127.0.0.1:8087；如需使用 PAC，设置pac地址为 <a href="http://127.0.0.1:8086/proxy.pac">http://127.0.0.1:8086/proxy.pac</a>
+</li>
+<li>也可以配合 SwitchySharp/FoxyProxy 等浏览器扩展 (SwitchySharp 用户可从 local 文件夹中的 SwitchyOptions.bak 文件导入配置)</li>
+</ul>
+</li>
+<li>导入证书
+
+<ul class="task-list">
+<li>IE/Chrome：使用管理员身份运行 goagent.exe 会自动向系统导入 IE/Chrome 的证书，你也可以双击 local 文件夹中的 CA.crt 安装证书(需要安装到 "受信任的根证书颁发机构" )；<br>
+<a href="https://raw.githubusercontent.com/goagent/goagent/wiki/InstallGuideImages/786e2887jw1e6mc176ngnj20bn0dit9l.jpg" target="_blank"><img src="https://raw.githubusercontent.com/goagent/goagent/wiki/InstallGuideImages/786e2887jw1e6mc176ngnj20bn0dit9l.jpg" alt="运行客户端" style="max-width:100%;"></a><br>
+<a href="https://raw.githubusercontent.com/goagent/goagent/wiki/InstallGuideImages/786e2887jw1e6mc184ah3j20e00e6wg1.jpg" target="_blank"><img src="https://raw.githubusercontent.com/goagent/goagent/wiki/InstallGuideImages/786e2887jw1e6mc184ah3j20e00e6wg1.jpg" alt="运行客户端" style="max-width:100%;"></a>
+</li>
+<li>下一步 -&gt; 完成 -&gt; 确定</li>
+<li>Firefox：需要单独导入证书，打开FireFox?-&gt;选项-&gt;高级-&gt;加密-&gt;查看证书-&gt;证书机构-&gt;导入证书, 选择 local\CA.crt, 勾选所有项，导入；</li>
+<li>opera：导入证书方法：首选项→高级→安全性→管理证书→证书颁发机构-&gt;导入-&gt;选择 local\CA.crt文件-&gt;依次确认</li>
+</ul>
+</li>
+</ol>
+
+<h2>
+<a id="user-content-浏览器设置方法" class="anchor" href="#%E6%B5%8F%E8%A7%88%E5%99%A8%E8%AE%BE%E7%BD%AE%E6%96%B9%E6%B3%95" aria-hidden="true"><span class="octicon octicon-link"></span></a>浏览器设置方法</h2>
+
+<ol class="task-list">
+<li>使用 GoAgent 自带代理设置功能
+
+<ul class="task-list">
+<li>该功能可以为 IE 内核浏览器和未安装代理类扩展的 Chrome/Opera 等默认使用 IE 代理的浏览器和软件设置代理，但不能给 FireFox 设置代理</li>
+<li>右击 GoAgent 托盘图标，在 "设置IE代理" 菜单中选择要使用的模式。</li>
+<li>禁用代理 什么也不做，需要用户自己手动为软件设置代理</li>
+<li>
+<a href="http://127.0.0.1:8086/proxy.pac">http://127.0.0.1:8086/proxy.pac</a> 使用自带的PAC自动判断是否使用代理</li>
+<li>127.0.0.1:8087 全部使用 GoAgent 代理</li>
+</ul>
+</li>
+<li>谷歌 Chrome 配合 SwitchySharp 扩展
+
+<ul class="task-list">
+<li>安装扩展</li>
+<li>地址栏输入 Chrome://extensions/ 后按回车，打开扩展管理页，将 local 文件夹中的 SwitchySharp.crx 拖拽到该页面之后点击确定即可安装，扩展也可以从 Chrome 应用商店获得<a href="https://chrome.google.com/webstore/detail/proxy-switchysharp/dpplabbmogkhghncfbfdeeokoefdjegm">https://chrome.google.com/webstore/detail/proxy-switchysharp/dpplabbmogkhghncfbfdeeokoefdjegm</a><br>
+<a href="https://raw.githubusercontent.com/goagent/goagent/wiki/InstallGuideImages/786e2887tw1e3hhmzjy1zj.jpg_install_Proxy_Switchy_Sharp.png" target="_blank"><img src="https://raw.githubusercontent.com/goagent/goagent/wiki/InstallGuideImages/786e2887tw1e3hhmzjy1zj.jpg_install_Proxy_Switchy_Sharp.png" alt="浏览器设置" style="max-width:100%;"></a>
+</li>
+<li>导入设置
+
+<ul class="task-list">
+<li>点击 SwitchySharp 图标-&gt;选项-&gt;导入/导出<br>
+<a href="https://raw.githubusercontent.com/goagent/goagent/wiki/InstallGuideImages/786e2887jw1e2s44kpzqyj.jpg_bak.png" target="_blank"><img src="https://raw.githubusercontent.com/goagent/goagent/wiki/InstallGuideImages/786e2887jw1e2s44kpzqyj.jpg_bak.png" alt="浏览器设置" style="max-width:100%;"></a>
+</li>
+<li>浏览到 SwitchyOptions.bak，点击确定导入设置</li>
+<li>更新自动切换规则(如果遇到无法更新规则列表，可以先运行 goagent ，并把浏览器代理设置为 GoAgent 模式再更新规则，不更新规则只会影响自动切换模式，不会影响其他模式的使用，若确实无法更新也可不更新，直接使用 PAC 模式即可)</li>
+<li>在扩展设置页点击 "切换规则" ，点击 "立即更新列表" ，最后点击 "保存" 。<br>
+<a href="https://raw.githubusercontent.com/goagent/goagent/wiki/InstallGuideImages/786e2887tw1e2s3tcf8lij.jpg_getrules.png" target="_blank"><img src="https://raw.githubusercontent.com/goagent/goagent/wiki/InstallGuideImages/786e2887tw1e2s3tcf8lij.jpg_getrules.png" alt="浏览器设置" style="max-width:100%;"></a>
+</li>
+</ul>
+</li>
+<li>单击地址栏右侧Proxy  SwitchySharp图标即可进行模式选择<br>
+<a href="https://raw.githubusercontent.com/goagent/goagent/wiki/InstallGuideImages/786e2887tw1e2s3t6x2ivj.jpg_changemode.png" target="_blank"><img src="https://raw.githubusercontent.com/goagent/goagent/wiki/InstallGuideImages/786e2887tw1e2s3t6x2ivj.jpg_changemode.png" alt="浏览器设置" style="max-width:100%;"></a>
+
+<ul class="task-list">
+<li>GoAgent 模式  除匹配 proxy.ini 中 profile 的直连外，其他全部通过GAE</li>
+<li>GoAgent PAAS模式 全部通过PAAS</li>
+<li>GoAgent PAC模式 根据 GoAgent 自带的 PAC 文件自动判断是否经过代理</li>
+<li>自动切换模式 根据切换规则自动选择是否进行代理，并根据所设情景模式自动选择使用何种代理</li>
+<li>遇到规则中没有的，可以使用扩展的 "新建规则" 按钮自行添加，选情景模式为 "GoAgent" ，使用此模式可以方便的定制自己的代理切换规则</li>
+<li>这个扩展偶尔会出BUG，出现设置无误但浏览器提示错误130无法连接到代理服务器，可以将自己的设置导出之后卸载重装</li>
+<li>如果遇到无法更新规则列表，可以先运行 goagent，并把浏览器代理设置为 GoAgent 模式再更新规则，不更新规则只会影响自动切换模式，不会影响其他模式的使用，若确实无法更新也可不更新，直接把扩展设置为 GoAgent PAC 模式即可</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Firefox 配合 FoxyProxy 扩展
+
+<ul class="task-list">
+<li>安装扩展 <a href="https://addons.mozilla.org/zh-cn/firefox/addon/foxyproxy-standard/">https://addons.mozilla.org/zh-cn/firefox/addon/foxyproxy-standard/</a>
+</li>
+<li>设置<br>
+<a href="https://raw.githubusercontent.com/goagent/goagent/wiki/InstallGuideImages/786e2887tw1e2s3t8whfdj.jpg_foxyproxy.png" target="_blank"><img src="https://raw.githubusercontent.com/goagent/goagent/wiki/InstallGuideImages/786e2887tw1e2s3t8whfdj.jpg_foxyproxy.png" alt="浏览器设置" style="max-width:100%;"></a>
+
+<ul class="task-list">
+<li>右击 foxyporxy 图标即可选择代理模式<br>
+<a href="https://raw.githubusercontent.com/goagent/goagent/wiki/InstallGuideImages/786e2887tw1e2s3taih9wj.jpg_foxyproxy1.png" target="_blank"><img src="https://raw.githubusercontent.com/goagent/goagent/wiki/InstallGuideImages/786e2887tw1e2s3taih9wj.jpg_foxyproxy1.png" alt="浏览器设置" style="max-width:100%;"></a>
+</li>
+</ul>
+</li>
+<li>添加代理规则订阅(可选)
+
+<ul class="task-list">
+<li>这里以添加 <a href="http://autoproxy-gfwlist.googlecode.com/svn/trunk/gfwlist.txt">gfwlist</a> 为例，你也可以自行添加其他规则订阅<br>
+<a href="https://raw.githubusercontent.com/goagent/goagent/wiki/InstallGuideImages/786e2887jw1e3f79aksi6j.jpg" target="_blank"><img src="https://raw.githubusercontent.com/goagent/goagent/wiki/InstallGuideImages/786e2887jw1e3f79aksi6j.jpg" alt="浏览器设置" style="max-width:100%;"></a><br>
+<a href="https://raw.githubusercontent.com/goagent/goagent/wiki/InstallGuideImages/786e2887jw1e3f7955znpj.jpg" target="_blank"><img src="https://raw.githubusercontent.com/goagent/goagent/wiki/InstallGuideImages/786e2887jw1e3f7955znpj.jpg" alt="浏览器设置" style="max-width:100%;"></a><br>
+<a href="https://raw.githubusercontent.com/goagent/goagent/wiki/InstallGuideImages/786e2887jw1e3f797nabpj.jpg" target="_blank"><img src="https://raw.githubusercontent.com/goagent/goagent/wiki/InstallGuideImages/786e2887jw1e3f797nabpj.jpg" alt="浏览器设置" style="max-width:100%;"></a><br>
+<a href="https://raw.githubusercontent.com/goagent/goagent/wiki/InstallGuideImages/786e2887jw1e3f79bigcuj.jpg" target="_blank"><img src="https://raw.githubusercontent.com/goagent/goagent/wiki/InstallGuideImages/786e2887jw1e3f79bigcuj.jpg" alt="浏览器设置" style="max-width:100%;"></a>
+</li>
+</ul>
+</li>
+<li>更多设置请自行探究</li>
+</ul>
+</li>
+<li>Firefox 配合 AutoProxy 扩展(新版Firefox请将此扩展升级至最新版)
+
+<ul class="task-list">
+<li>安装扩展 <a href="https://addons.mozilla.org/zh-cn/firefox/addon/autoproxy/">https://addons.mozilla.org/zh-cn/firefox/addon/autoproxy/</a>
+</li>
+<li>设置
+
+<ul class="task-list">
+<li>添加代理服务器 注意:新版 autoproxy 已内置GoAgent配置，可直接进行下一步<br>
+<a href="https://raw.githubusercontent.com/goagent/goagent/wiki/InstallGuideImages/786e2887tw1e2s3t49g0ej.jpg_autoproxyfirst.png" target="_blank"><img src="https://raw.githubusercontent.com/goagent/goagent/wiki/InstallGuideImages/786e2887tw1e2s3t49g0ej.jpg_autoproxyfirst.png" alt="浏览器设置" style="max-width:100%;"></a><br>
+<a href="https://raw.githubusercontent.com/goagent/goagent/wiki/InstallGuideImages/786e2887tw1e2s3t08ft0j.jpg_autoproxy1.png" target="_blank"><img src="https://raw.githubusercontent.com/goagent/goagent/wiki/InstallGuideImages/786e2887tw1e2s3t08ft0j.jpg_autoproxy1.png" alt="浏览器设置" style="max-width:100%;"></a><br>
+<a href="https://raw.githubusercontent.com/goagent/goagent/wiki/InstallGuideImages/786e2887tw1e2s3t0sibvj.jpg_autoproxy2.png" target="_blank"><img src="https://raw.githubusercontent.com/goagent/goagent/wiki/InstallGuideImages/786e2887tw1e2s3t0sibvj.jpg_autoproxy2.png" alt="浏览器设置" style="max-width:100%;"></a>
+</li>
+<li>添加规则订阅<br>
+<a href="https://raw.githubusercontent.com/goagent/goagent/wiki/InstallGuideImages/786e2887tw1e2s3t241zej.jpg_autoproxyaddrules1.png" target="_blank"><img src="https://raw.githubusercontent.com/goagent/goagent/wiki/InstallGuideImages/786e2887tw1e2s3t241zej.jpg_autoproxyaddrules1.png" alt="浏览器设置" style="max-width:100%;"></a><br>
+<a href="https://raw.githubusercontent.com/goagent/goagent/wiki/InstallGuideImages/786e2887tw1e2s3t380m4j.jpg_autoproxyaddrules2.png" target="_blank"><img src="https://raw.githubusercontent.com/goagent/goagent/wiki/InstallGuideImages/786e2887tw1e2s3t380m4j.jpg_autoproxyaddrules2.png" alt="浏览器设置" style="max-width:100%;"></a>
+</li>
+<li>选择自己需要的模式<br>
+<a href="https://raw.githubusercontent.com/goagent/goagent/wiki/InstallGuideImages/786e2887tw1e2s3szej8sj.jpg_autoproxy.png" target="_blank"><img src="https://raw.githubusercontent.com/goagent/goagent/wiki/InstallGuideImages/786e2887tw1e2s3szej8sj.jpg_autoproxy.png" alt="浏览器设置" style="max-width:100%;"></a>
+
+<ul class="task-list">
+<li>自动模式   根据规则自行选择是否使用代理</li>
+<li>全局模式   全部使用代理</li>
+<li>禁用代理   全部不使用代理</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>opera 浏览器设置
+
+<ul class="task-list">
+<li>同 IE 一样有两种方式可选，不过不会影响系统其他程序的联网</li>
+<li>设置代理为 127.0.0.1:8087，全部使用 goagent 代理<br>
+<a href="https://raw.githubusercontent.com/goagent/goagent/wiki/InstallGuideImages/786e2887tw1e2s3tl5ww7j.jpg_opera1.png" target="_blank"><img src="https://raw.githubusercontent.com/goagent/goagent/wiki/InstallGuideImages/786e2887tw1e2s3tl5ww7j.jpg_opera1.png" alt="浏览器设置" style="max-width:100%;"></a>
+</li>
+<li>使用 PAC 自动代理<br>
+<a href="https://raw.githubusercontent.com/goagent/goagent/wiki/InstallGuideImages/786e2887tw1e2s3tlvyqmj.jpg_opera-pac.png" target="_blank"><img src="https://raw.githubusercontent.com/goagent/goagent/wiki/InstallGuideImages/786e2887tw1e2s3tlvyqmj.jpg_opera-pac.png" alt="浏览器设置" style="max-width:100%;"></a>
+</li>
+<li>不使用时应恢复为无代理状态</li>
+</ul>
+</li>
+<li>IE浏览器设置
+
+<ul class="task-list">
+<li>工具-&gt;Internet 选项-&gt;连接，局域网用户单击"局域网设置"。宽带用户选中自己正在使用的宽带连接之后单击"设置"，不要选 "局域网设置"</li>
+<li>局域网用户设置方法
+
+<ul class="task-list">
+<li>设置代理为 127.0.0.1:8087 ，全部使用 goagent 代理(不建议)<br>
+<a href="https://raw.githubusercontent.com/goagent/goagent/wiki/InstallGuideImages/786e2887jw1e3ewkxcosfj.jpg_ie1.png" target="_blank"><img src="https://raw.githubusercontent.com/goagent/goagent/wiki/InstallGuideImages/786e2887jw1e3ewkxcosfj.jpg_ie1.png" alt="浏览器设置" style="max-width:100%;"></a>
+</li>
+<li>使用 PAC 自动代理<br>
+<a href="https://raw.githubusercontent.com/goagent/goagent/wiki/InstallGuideImages/786e2887jw1e3ewkyd12nj.jpg_ie2.png" target="_blank"><img src="https://raw.githubusercontent.com/goagent/goagent/wiki/InstallGuideImages/786e2887jw1e3ewkyd12nj.jpg_ie2.png" alt="浏览器设置" style="max-width:100%;"></a>
+</li>
+</ul>
+</li>
+<li>宽带用户设置方法
+
+<ul class="task-list">
+<li>选中自己正在使用的宽带连接之后单击"设置"<br>
+<a href="https://raw.githubusercontent.com/goagent/goagent/wiki/InstallGuideImages/786e2887jw1e6fvndhycoj20al04zmxg.jpg" target="_blank"><img src="https://raw.githubusercontent.com/goagent/goagent/wiki/InstallGuideImages/786e2887jw1e6fvndhycoj20al04zmxg.jpg" alt="浏览器设置" style="max-width:100%;"></a>
+</li>
+<li>设置代理为 127.0.0.1:8087，全部使用 goagent 代理(不建议)<br>
+<a href="https://raw.githubusercontent.com/goagent/goagent/wiki/InstallGuideImages/786e2887jw1e6fvnd4bicj20c5088my2.jpg" target="_blank"><img src="https://raw.githubusercontent.com/goagent/goagent/wiki/InstallGuideImages/786e2887jw1e6fvnd4bicj20c5088my2.jpg" alt="浏览器设置" style="max-width:100%;"></a>
+</li>
+</ul>
+</li>
+<li>不使用时要将IE恢复无代理状态</li>
+</ul>
+</li>
+</ol>
+
+<h2>
+<a id="user-content-适用环境" class="anchor" href="#%E9%80%82%E7%94%A8%E7%8E%AF%E5%A2%83" aria-hidden="true"><span class="octicon octicon-link"></span></a>适用环境</h2>
+
+<ul class="task-list">
+<li>适用：浏览器，支持 http 代理的下载软件等</li>
+<li>不适用：游戏客户端等需要稳定网络的程序，QQ，Tor(验证证书)。待添加。。。</li>
+</ul>
+
+<h2>
+<a id="user-content-关于软件更新" class="anchor" href="#%E5%85%B3%E4%BA%8E%E8%BD%AF%E4%BB%B6%E6%9B%B4%E6%96%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>关于软件更新</h2>
+
+<ul class="task-list">
+<li>更新历史中带有[是]则需要重新上传，否则不用重新上传。注意：是否需要重新上传是相对于前一版的，若你之前版本与当前版本之间某一版或多版带有[是]仍然需要重新上传。</li>
+<li>appid 并不绑定任何客户端，如果本次更新无需重新上传，只需修改 proxy.ini 中的 appid 即可使用。同样，你也可以把 appid 共享给朋友，或者在自己其他机器上使用，一个 appid 可以多人多机器同时使用，在无需更新服务端的情况下，只需成功上传一次即可。在没有设定密码的情况下，只需要知道 appid 就可以使用你的 appid 的流量，为防止被盗用可以<a href="https://goagent.github.io/?/wiki/SetPassword.md">加上密码</a>。</li>
+<li>goagent 每一版下载的都是全部文件，你可以选择覆盖原文件或者将新版放另一个文件夹，旧版你可以选择留存或者删除，修改新版 proxy.ini 中相关设置即可运行。如果旧版添加了开机启动，需要将旧开机启动删除。如果旧版已经在运行，需先将旧版关闭。</li>
+<li>如果之前版本没有ssl错误，使用新版出现 ssl 错误可以把原来的 CA.crt 和 certs 文件夹内的文件覆盖当前的这些文件。或者将CA.crt 和 certs 文件夹删除，同时删除浏览器中所有goagent ca 的证书，再重启 goagent，会生成新证书，重启浏览器再导入新证书即可。浏览器证书中只能有一个 goagent ca 的证书。</li>
+</ul>
+</article>
+  </div>
+
+  </div>
+</div>
+
+<a href="#jump-to-line" rel="facebox[.linejump]" data-hotkey="l" style="display:none">Jump to Line</a>
+<div id="jump-to-line" style="display:none">
+  <form accept-charset="UTF-8" class="js-jump-to-line-form">
+    <input class="linejump-input js-jump-to-line-field" type="text" placeholder="Jump to line&hellip;" autofocus>
+    <button type="submit" class="button">Go</button>
+  </form>
+</div>
+
+        </div>
+
+      </div><!-- /.repo-container -->
+      <div class="modal-backdrop"></div>
+    </div><!-- /.container -->
+  </div><!-- /.site -->
+
+
+    </div><!-- /.wrapper -->
+
+      <div class="container">
+  <div class="site-footer" role="contentinfo">
+    <ul class="site-footer-links right">
+      <li><a href="https://status.github.com/">Status</a></li>
+      <li><a href="https://developer.github.com">API</a></li>
+      <li><a href="http://training.github.com">Training</a></li>
+      <li><a href="http://shop.github.com">Shop</a></li>
+      <li><a href="/blog">Blog</a></li>
+      <li><a href="/about">About</a></li>
+
+    </ul>
+
+    <a href="/" aria-label="Homepage">
+      <span class="mega-octicon octicon-mark-github" title="GitHub"></span>
+    </a>
+
+    <ul class="site-footer-links">
+      <li>&copy; 2014 <span title="0.02780s from github-fe119-cp1-prd.iad.github.net">GitHub</span>, Inc.</li>
+        <li><a href="/site/terms">Terms</a></li>
+        <li><a href="/site/privacy">Privacy</a></li>
+        <li><a href="/security">Security</a></li>
+        <li><a href="/contact">Contact</a></li>
+    </ul>
+  </div><!-- /.site-footer -->
+</div><!-- /.container -->
+
+
+    <div class="fullscreen-overlay js-fullscreen-overlay" id="fullscreen_overlay">
+  <div class="fullscreen-container js-suggester-container">
+    <div class="textarea-wrap">
+      <textarea name="fullscreen-contents" id="fullscreen-contents" class="fullscreen-contents js-fullscreen-contents js-suggester-field" placeholder=""></textarea>
+    </div>
+  </div>
+  <div class="fullscreen-sidebar">
+    <a href="#" class="exit-fullscreen js-exit-fullscreen tooltipped tooltipped-w" aria-label="Exit Zen Mode">
+      <span class="mega-octicon octicon-screen-normal"></span>
+    </a>
+    <a href="#" class="theme-switcher js-theme-switcher tooltipped tooltipped-w"
+      aria-label="Switch themes">
+      <span class="octicon octicon-color-mode"></span>
+    </a>
+  </div>
+</div>
+
+
+
+    <div id="ajax-error-message" class="flash flash-error">
+      <span class="octicon octicon-alert"></span>
+      <a href="#" class="octicon octicon-x flash-close js-ajax-error-dismiss" aria-label="Dismiss error"></a>
+      Something went wrong with that request. Please try again.
+    </div>
+
+
+      <script crossorigin="anonymous" src="https://assets-cdn.github.com/assets/frameworks-2d727fed4d969b14b28165c75ad12d7dddd56c0198fa70cedc3fdad7ac395b2c.js" type="text/javascript"></script>
+      <script async="async" crossorigin="anonymous" src="https://assets-cdn.github.com/assets/github-684891bceb382002c2b78afbaee41d8959d7fcd0475250e2e5ab23e8b72321d2.js" type="text/javascript"></script>
+      
+      
+  </body>
+</html>
+
